@@ -3,15 +3,16 @@ import EventDemo from './components/events/EventDemo';
 import StaticRoute from "./components/routing/StaticRoute";
 import DynamicRoute from "./components/routing/DynamicRoute";
 import FormDemo from "./components/forms/FormDemo";
+import DynamicRoutelink from "./components/routing/DynamicRoutelink";
 
 function App() {
   return (
     <Router>
       <nav style={{padding:"1rem", background:"#f0f0f0"}}>
-          <Link to='/events'> EVENTS </Link> |{" "}
-          <Link to='/static'> Static Route</Link> |{" "}
-          <Link to='/dynamic/101'> Dynamic Route </Link> | {" "}
-          <Link to="/form"> Fill a form </Link>
+          <Link to='/events'> EVENTS </Link> <br/> <br/> <br/>
+          <Link to='/dynamic/101'> Dynamic Route </Link> {" "} <br/> <br/> <br/>
+          <Link to="/form"> Fill a form </Link> <br/> <br/> <br/>
+          <DynamicRoutelink/> <br/> <br/> <br/>
       </nav>
 
     <Routes>
