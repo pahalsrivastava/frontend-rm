@@ -1,7 +1,4 @@
 ## Event Handling Demo
-
-The event handling page demonstrates **React event handling**:
-
 - **Button Click:** Increments a counter on each click.
 - **Form Submission:** Handles submit with `preventDefault()` to avoid page reload.
 - **Routing:** Accessible via `/events` using React Router.
@@ -14,8 +11,6 @@ The event handling page demonstrates **React event handling**:
 
 ## Routing Demo
 
-This section demonstrates **React Router** with both static and dynamic routes.
-
 ### Static Route
 - Accessible at `/static`.
 - Displays a simple static page with predefined content.
@@ -26,3 +21,17 @@ This section demonstrates **React Router** with both static and dynamic routes.
 - Reads a dynamic URL parameter using `useParams`.
 - Demonstrates rendering different content based on route parameters.
 - Example: `/dynamic/101` displays `Dynamic Route Parameter: 101`.
+
+## Forms Demo (Controlled Components)
+
+- Inputs are controlled via React state (`useState`).
+- Handles **form submission** with `onSubmit`.
+- Validates user input:
+  - Name is required.
+  - Email is required and must be valid.
+- Displays error messages for invalid inputs.
+- Uses `preventDefault()` to stop page reload on submit.
+- Clears form and shows an alert when submission is successful.
+
+### Access
+- Navigate to `/form` to see the demo in action.

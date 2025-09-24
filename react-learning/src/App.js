@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import EventDemo from './components/events/EventDemo';
 import StaticRoute from "./components/routing/StaticRoute";
 import DynamicRoute from "./components/routing/DynamicRoute";
+import FormDemo from "./components/forms/FormDemo";
 
 function App() {
   return (
@@ -9,12 +10,15 @@ function App() {
       <nav style={{padding:"1rem", background:"#f0f0f0"}}>
           <Link to='/events'> EVENTS </Link> |{" "}
           <Link to='/static'> Static Route</Link> |{" "}
-          <Link to='/dynamic/101'> Dynamic Route </Link>
+          <Link to='/dynamic/101'> Dynamic Route </Link> | {" "}
+          <Link to="/form"> Fill a form </Link>
       </nav>
+
     <Routes>
       <Route path="/events" element={<EventDemo/>}/>
       <Route path="/static" element={<StaticRoute/>}/>
       <Route path="/dynamic/:id" element={<DynamicRoute/>}/>
+      <Route path="/form" element={<FormDemo/>}/>
     </Routes>
     </Router>
   );
