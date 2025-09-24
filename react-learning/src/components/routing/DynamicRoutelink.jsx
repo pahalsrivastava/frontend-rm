@@ -5,7 +5,7 @@ function DynamicRoutelink() {
         const randomId = Math.floor(Math.random()*1000);
         navigate(`/dynamic/${randomId}`);
     };
-    return <button onClick={handleGo}> GO TO RANDOMLY GENERATED DYNAMIC ROUTE </button>;
+    return <button onClick={handleGo}> Click here for the auto-generated route. </button>;
 }
 
 export default DynamicRoutelink;

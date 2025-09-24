@@ -35,3 +35,22 @@
 
 ### Access
 - Navigate to `/form` to see the demo in action.
+
+## REST API; integration of the weatherAPI. 
+REST api - 1. Representational State Transfer, 2.dynamic data fetching and manipulation.
+
+response format- .json
+fetching data - useEffect and useState. 
+
+### 1. Fetching Data from Weather API
+- Users enter a city in a controlled form.
+- On submission, a GET request is sent to the weather API:
+
+```javascript
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_KEY`)
+  .then(res => {
+    if(!res.ok) throw new Error("City not found");
+    return res.json();
+  })
+  .then(data => setWeather(data))
+  .catch(err => setError(err.message));
