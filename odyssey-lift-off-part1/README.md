@@ -1,4 +1,4 @@
-# GraphQL: The Schema
+# GraphQL: The Schema : ODYSSEY LIFTOFF PART1 
 
 A **GraphQL schema** serves as a contract between the server and the client. It defines:
 
@@ -38,7 +38,7 @@ SCHEMA DESCRIPTIONS :
 """THIS IS A
 MULTIPLE LINE
 DESCRIPTION"""
-
+```
 ## Query type
 
 The `Query` type defines entry points for the client to fetch data:
@@ -48,10 +48,11 @@ type Query {
   "Get tracks array for homepage grid"
   tracksForHome: [Track!]!
 }
+```
 
-###Track type:
-```js
+### Track type:
 "A track is a group of Modules that teaches about a specific topic"
+```js
 type Track {
   id: ID!
   "The track's title"
@@ -65,8 +66,9 @@ type Track {
   "The number of modules this track contains"
   modulesCount: Int
 }
+```
 
-###MOCKED DATA:
+### MOCKED DATA:
 ```js 
 const mocks = {
   Track: () => ({
@@ -90,6 +92,7 @@ const mocks = {
     missions: []
   })
 };
+```
 
 ### Testing Queries on the Local Server
 
@@ -117,6 +120,7 @@ query {
     modulesCount
   }
 }
+```
 
 ## EFFECTIVE WAYS OF WRITING A QUERY: 
 1. Test Out queries in GraphOS studio Explorer and copy them over.
@@ -137,5 +141,30 @@ const { loading, error, data } = useQuery(YOUR_QUERY, {
   variables: { /* optional variables */ },
   fetchPolicy: "cache-first", // optional caching strategy
 });
+```
+---
+# GRAPHQL: ODYSSEY LIFT OFF PART 2
+### GRAPHQL server:
++ It extracts the string for the GraphQL query from the request
++ It validates the query against the schema 
++ It transforms the GraphQL query string into an Abstract Syntax Tree.
 
-###GRAPHQL server:
+### GraphQL server errors:
++ A requested field is not defined in the schema.
++ An incoming GraphQL query string is malformed. 
+
+The data key containing a result object with the same shape as the query is returned in the GraphQL server.
+ 
+ ###  API usage: 
+ ```js
+GET   /tracks
+GET   /track/:id
+PATCH /track/:id
+GET   /track/:id/modules
+GET   /author/:id
+GET   /module/:id
+``` 
+
+### RESOLVER FUNCTIONS:
+A resolver is a function. It has the same name as the field that it populates data for. It can fetch data from any data source, then transforms that data into the shape your client requires.
+  + Resolver functions have a specific signature with four optional parameters: parent, args, contextValue, and info.
