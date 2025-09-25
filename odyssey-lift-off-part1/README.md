@@ -31,7 +31,7 @@ type SpaceCat {
   age: Int! #for not null
   mission: [Mission] #list of missions
 }
-
+```
 SCHEMA DESCRIPTIONS :
 ```js
 "NORMAL DESCRIPTION"
