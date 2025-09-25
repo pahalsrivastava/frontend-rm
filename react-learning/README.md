@@ -3,6 +3,20 @@
 - **Form Submission:** Handles submit with `preventDefault()` to avoid page reload.
 - **Routing:** Accessible via `/events` using React Router.
 
+## Synthetic Event System
+React uses **Synthetic Events** to normalize events across different browsers. Key points:
+
+- Wraps the native browser event.
+- Provides a consistent interface regardless of the browser.
+- Supports event pooling for performance optimization (events are reused internally).
+
+**Example:**
+```jsx
+function handleClick(event) {
+  console.log("Button clicked!");
+  console.log(event.type); // logs 'click'
+}
+
 **Key Concepts:**
 - React synthetic events
 - useState for managing state
@@ -21,6 +35,24 @@
 - Reads a dynamic URL parameter using `useParams`.
 - Demonstrates rendering different content based on route parameters.
 - Example: `/dynamic/101` displays `Dynamic Route Parameter: 101`.
+## Advantages of React Routing
+
+React Router provides a robust and flexible way to manage navigation in single-page applications. Key advantages include:
+
+- Single Page Authentication Support
+
+- Dynamic Routing
+
+- Nested Routes
+
+- Protected Routes
+
+- Declarative Syntaxes
+
+- Integration with State Management
+
+- Cross-Browser Compatibility. 
+
 
 ## Forms Demo (Controlled Components)
 
@@ -54,3 +86,5 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_
   })
   .then(data => setWeather(data))
   .catch(err => setError(err.message));
+
+## Preventing default behaviour - preventDefault()
