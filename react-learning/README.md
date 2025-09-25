@@ -88,3 +88,5 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_
   .catch(err => setError(err.message));
 
 ## Preventing default behaviour - preventDefault()
+## using hooks- useState(), useEffect(), useMemo(), useRef().
+
