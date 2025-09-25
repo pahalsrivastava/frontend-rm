@@ -25,7 +25,7 @@ Example: the `Track` object type may have an `author` field of type `Author`.
 
 Use the `type` keyword followed by the **type name** (PascalCase recommended) and curly braces `{}` to declare fields:
 
-```graphql
+```js
 type SpaceCat {
   name: String 
   age: Int! #for not null
@@ -33,24 +33,24 @@ type SpaceCat {
 }
 
 SCHEMA DESCRIPTIONS :
-```graphql 
+```js
 "NORMAL DESCRIPTION"
 """THIS IS A
 MULTIPLE LINE
 DESCRIPTION"""
 
-### Query Type
+## Query type
 
 The `Query` type defines entry points for the client to fetch data:
 
-```graphql
+```js
 type Query {
   "Get tracks array for homepage grid"
   tracksForHome: [Track!]!
 }
 
 ###Track type:
-```graphql
+```js
 "A track is a group of Modules that teaches about a specific topic"
 type Track {
   id: ID!
@@ -103,7 +103,7 @@ You can open this URL in your browser or Apollo Explorer to run test queries.
 
 Here’s a sample query to fetch tracks with mocked data:
 
-```graphql
+```js
 query {
   tracksForHome {
     id
@@ -137,3 +137,5 @@ const { loading, error, data } = useQuery(YOUR_QUERY, {
   variables: { /* optional variables */ },
   fetchPolicy: "cache-first", // optional caching strategy
 });
+
+###GRAPHQL server:
