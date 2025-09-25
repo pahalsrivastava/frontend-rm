@@ -16,6 +16,7 @@ function handleClick(event) {
   console.log("Button clicked!");
   console.log(event.type); // logs 'click'
 }
+```
 
 **Key Concepts:**
 - React synthetic events
@@ -86,7 +87,13 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_
   })
   .then(data => setWeather(data))
   .catch(err => setError(err.message));
+```
 
 ## Preventing default behaviour - preventDefault()
 ## using hooks- useState(), useEffect(), useMemo(), useRef().
 
+## UNIT TESTING IN REACT:
+Unit testing in React focuses on verifying that individual components of an application works correctly or not.
+Testing frameworks;:
++ JEST - often used with react provides a test runner, assertion library and mocking capabilities. 
++ VITEST - A newer testing framework designed for speed, especially when used with vite.
