@@ -1,4 +1,4 @@
-const gql = require("graphql-tag");
+const gql = require( 'graphql-tag');
 const typeDefs= gql `
     type Query{
         tracksForHome: [Track!]!
@@ -11,6 +11,8 @@ const typeDefs= gql `
         thumbnail:String
         length:Int
         modulesCount:Int
+        description: String
+        numberOfViews: Int
     }
         
     type Author{
@@ -18,8 +20,6 @@ const typeDefs= gql `
         name:String!
         photo:String
     }
-    
-
 `;
 module.exports=typeDefs;
 
