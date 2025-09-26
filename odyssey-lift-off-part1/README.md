@@ -168,3 +168,14 @@ GET   /module/:id
 ### RESOLVER FUNCTIONS:
 A resolver is a function. It has the same name as the field that it populates data for. It can fetch data from any data source, then transforms that data into the shape your client requires.
   + Resolver functions have a specific signature with four optional parameters: parent, args, contextValue, and info.
+
+
+### ARGUMENTS IN GRAPHQL:
++ To transform a field's returned value
++ To provide a user-submitted search term
++ To filter a set of objects
++ To retrieve a specific object 
+
+```js
+track(id:ID!): Track
+```
