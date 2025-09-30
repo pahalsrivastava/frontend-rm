@@ -100,7 +100,6 @@ Testing frameworks;:
 + JEST - often used with react provides a test runner, assertion library and mocking capabilities. 
 + VITEST - A newer testing framework designed for speed, especially when used with vite.
 
-
 ## REQUIREMENTS OF JEST FOR TESTING:
 + An assertion library: API for validating a program's functionality
 + A test runner: a tool that executes tests and provides outputted test summaries. 
