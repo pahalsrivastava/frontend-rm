@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from "@testing-library/react";
-import MyButton from "./MyButton";
+import MyButton from "../MyButton";
 
 test("renders button with correct label", () =>{
     render(<MyButton label="Click Me"/>);
