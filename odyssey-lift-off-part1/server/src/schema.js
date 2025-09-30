@@ -29,6 +29,16 @@ const typeDefs = gql`
     title: String!
     length: Int
   }
+  
+  type Mutation{
+    incrementTrackViews(id:ID!): IncrementTrackViewsResponse!
+  }
+  type incrementTrackViews{
+    code:Int!
+    success=Boolean!
+    message: String!
+    track:Track 
+  }
 `;
 
 module.exports = typeDefs;
