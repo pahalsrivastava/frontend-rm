@@ -92,6 +92,8 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_
 ## Preventing default behaviour - preventDefault()
 ## using hooks- useState(), useEffect(), useMemo(), useRef().
 
+![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
+
 ## UNIT TESTING IN REACT:
 Unit testing in React focuses on verifying that individual components of an application works correctly or not.
 Testing frameworks;:
