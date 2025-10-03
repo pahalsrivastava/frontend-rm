@@ -37,9 +37,16 @@ A function in typescript includes:  parameter types, return type, type inference
 Variables store values and are declared using let, const or var. 
 + var
 + let
-+ const 
--> primitive types
--> string
--> boolean 
--> null
--> undefined
++ const
+Types of variables: 
+    -> primitive types
+    -> string
+    -> boolean 
+    -> null
+    -> undefined
+
+### Type inference
+```typescript 
+let inferredString = "TypeScript"; 
+let inferredNumber = 123;   
+```
